@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 public class Reserva {
 
     @Id
-    private String id;
+    private int id;
 
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
@@ -28,11 +28,11 @@ public class Reserva {
         super();
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

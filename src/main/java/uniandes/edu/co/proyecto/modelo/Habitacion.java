@@ -10,13 +10,13 @@ import jakarta.persistence.Id;
 public class Habitacion {
 
     @Id
-    private String numero;
+    private int numero;
 
     private String hotel;
     private TipoHabitacion tipoHabitacion;
     private List<Cliente> clientes;
 
-    public Habitacion(String numero, String hotel, TipoHabitacion tipoHabitacion, List<Cliente> clientes) {
+    public Habitacion(int numero, String hotel, TipoHabitacion tipoHabitacion, List<Cliente> clientes) {
         super();
         this.numero = numero;
         this.hotel = hotel;
@@ -28,11 +28,11 @@ public class Habitacion {
         super();
     }
 
-    public String getNumero() {
+    public int getNumero() {
         return numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumeron(int numero) {
         this.numero = numero;
     }
 

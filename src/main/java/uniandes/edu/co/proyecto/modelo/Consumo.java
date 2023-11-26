@@ -10,9 +10,8 @@ import jakarta.persistence.Id;
 public class Consumo {
 
     @Id
-    private String id;
-
     private LocalDate fecha;
+
     private Servicio servicio;
 
     public Consumo(LocalDate fecha, Servicio servicio) {
@@ -23,14 +22,6 @@ public class Consumo {
 
     public Consumo() {
         super();
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public LocalDate getFecha() {

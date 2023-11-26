@@ -10,9 +10,8 @@ import jakarta.persistence.Id;
 public class TipoHabitacion {
 
     @Id
-    private String id;
-
     private String nombre;
+
     private int costo;
     private List<String> dotacion;
 
@@ -25,14 +24,6 @@ public class TipoHabitacion {
 
     public TipoHabitacion() {
         super();
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getNombre() {
