@@ -6,6 +6,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import jakarta.persistence.Id;
 
+import java.util.List;
+
 @Document("clientes")
 public class Cliente {
 
@@ -15,9 +17,9 @@ public class Cliente {
     private String nombre;
     private LocalDate entrada;
     private LocalDate salida;
-    private Consumo consumo;
+    private List<Consumo> consumo;
 
-    public Cliente(String nombre, LocalDate entrada, LocalDate salida, Consumo consumo) {
+    public Cliente(String nombre, LocalDate entrada, LocalDate salida, List<Consumo> consumo) {
         super();
         this.nombre = nombre;
         this.entrada = entrada;
@@ -60,15 +62,12 @@ public class Cliente {
     public void setSalida(LocalDate salida) {
         this.salida = salida;
     }
-
-    public Consumo getConsumo() {
+    
+    public List<Consumo> getConsumo() {
         return consumo;
     }
 
-    public void setConsumo(Consumo consumo) {
+    public void setConsumo(List<Consumo> consumo) {
         this.consumo = consumo;
     }
-
-    
-
 }

@@ -21,10 +21,10 @@ public interface ReservaRepository extends MongoRepository<Reserva, Integer> {
 
     //Delete
     @Query(value = "{_id : ?0}", delete =  true)
-    void deleteById(int id);
+    void deleteById(String id);
 
     //Update
     @Query(value = "{_id : ?0}")
-    Reserva updateReserva(int id, Reserva reserva);
+    Reserva updateReserva(String id, Reserva reserva);
     
 }

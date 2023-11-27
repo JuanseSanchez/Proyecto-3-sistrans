@@ -12,13 +12,13 @@ public class TipoHabitacion {
     @Id
     private String nombre;
 
-    private int costo;
+    private int precio;
     private List<String> dotacion;
 
-    public TipoHabitacion(String nombre, int costo, List<String> dotacion) {
+    public TipoHabitacion(String nombre, int precio, List<String> dotacion) {
         super();
         this.nombre = nombre;
-        this.costo = costo;
+        this.precio = precio;
         this.dotacion = dotacion;
     }
 
@@ -34,12 +34,12 @@ public class TipoHabitacion {
         this.nombre = nombre;
     }
 
-    public int getCosto() {
-        return costo;
+    public int getPrecio() {
+        return precio;
     }
 
-    public void setCosto(int costo) {
-        this.costo = costo;
+    public void setPrecio(int precio) {
+        this.precio= precio;
     }
 
     public List<String> getDotacion() {

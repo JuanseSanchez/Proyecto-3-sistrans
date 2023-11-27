@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 
 @Document(collection = "reservas")
 public class Reserva {
-
+    //_id
     @Id
     private int id;
 
