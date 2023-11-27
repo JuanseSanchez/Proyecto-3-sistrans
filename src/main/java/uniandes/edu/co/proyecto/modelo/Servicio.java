@@ -1,5 +1,7 @@
 package uniandes.edu.co.proyecto.modelo;
 
+import java.time.LocalDate;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import jakarta.persistence.Id;
@@ -8,27 +10,19 @@ import jakarta.persistence.Id;
 public class Servicio {
 
     @Id
-    private int id;
-
     private String nombre;
-    private int costo;
 
-    public Servicio(String nombre, int costo) {
+    private LocalDate fecha;
+    private int precio;
+
+    public Servicio(LocalDate fecha, int precio){
         super();
-        this.nombre = nombre;
-        this.costo = costo;
+        this.fecha = fecha;
+        this.precio = precio;
     }
 
     public Servicio() {
         super();
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNombre() {
@@ -39,14 +33,23 @@ public class Servicio {
         this.nombre = nombre;
     }
 
-    public int getCosto() {
-        return costo;
+    public LocalDate getFecha() {
+        return fecha;
     }
 
-    public void setCosto(int costo) {
-        this.costo = costo;
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
     }
 
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    
     
 
 }

@@ -2,6 +2,7 @@ package uniandes.edu.co.proyecto.modelo;
 
 import java.time.LocalDate;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import jakarta.persistence.Id;
@@ -14,9 +15,9 @@ public class Reserva {
 
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
-    private Habitacion habitacion;
+    private ObjectId habitacion;
 
-    public Reserva(LocalDate fechaInicio, LocalDate fechaFin, Habitacion habitacion) {
+    public Reserva(LocalDate fechaInicio, LocalDate fechaFin, ObjectId habitacion) {
         super();
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
@@ -52,11 +53,11 @@ public class Reserva {
         this.fechaFin = fechaFin;
     }
 
-    public Habitacion getHabitacion() {
+    public ObjectId getHabitacion() {
         return habitacion;
     }
 
-    public void setHabitacion(Habitacion habitacion) {
+    public void setHabitacion(ObjectId habitacion) {
         this.habitacion = habitacion;
     }
 

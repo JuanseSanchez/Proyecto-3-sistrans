@@ -4,12 +4,9 @@ import java.time.LocalDate;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import jakarta.persistence.Id;
-
 @Document("consumos")
 public class Consumo {
 
-    @Id
     private LocalDate fecha;
 
     private Servicio servicio;

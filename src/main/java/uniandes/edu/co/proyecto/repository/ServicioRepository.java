@@ -7,14 +7,10 @@ import org.springframework.data.mongodb.repository.Query;
 
 import uniandes.edu.co.proyecto.modelo.Servicio;
 
-public interface ServicioRepository extends MongoRepository<Servicio, Integer>{
+public interface ServicioRepository extends MongoRepository<Servicio, String>{
 
     //Create
     Servicio save(Servicio servicio);
-
-    //Read
-    @Query(value ="{'id' : ?0}")
-    Servicio findById(int id);
 
     @Query(value = "{'nombre' : ?0}")
     Servicio findByNombre(String nombre);
