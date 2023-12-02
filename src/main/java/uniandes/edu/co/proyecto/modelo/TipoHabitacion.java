@@ -2,16 +2,9 @@ package uniandes.edu.co.proyecto.modelo;
 
 import java.util.List;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import jakarta.persistence.Id;
-
-@Document("tipos_habitacion")
 public class TipoHabitacion {
 
-    @Id
     private String nombre;
-
     private int precio;
     private List<String> dotacion;
 

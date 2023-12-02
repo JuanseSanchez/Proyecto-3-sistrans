@@ -1,21 +1,14 @@
 package uniandes.edu.co.proyecto.modelo;
 
-import java.time.LocalDate;
+import org.bson.BsonDateTime;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import jakarta.persistence.Id;
-
-@Document("servicios")
 public class Servicio {
 
-    @Id
     private String nombre;
-
-    private LocalDate fecha;
+    private BsonDateTime fecha;
     private int precio;
 
-    public Servicio(LocalDate fecha, int precio){
+    public Servicio(BsonDateTime fecha, int precio){
         super();
         this.fecha = fecha;
         this.precio = precio;
@@ -33,11 +26,11 @@ public class Servicio {
         this.nombre = nombre;
     }
 
-    public LocalDate getFecha() {
+    public BsonDateTime getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDate fecha) {
+    public void setFecha(BsonDateTime fecha) {
         this.fecha = fecha;
     }
 

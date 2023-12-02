@@ -1,25 +1,18 @@
 package uniandes.edu.co.proyecto.modelo;
 
-import java.time.LocalDate;
-
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import jakarta.persistence.Id;
-
 import java.util.List;
 
-@Document("clientes")
+import org.bson.BsonDateTime;
+
 public class Cliente {
 
-    @Id
     private int id;
-
     private String nombre;
-    private LocalDate entrada;
-    private LocalDate salida;
+    private BsonDateTime entrada;
+    private BsonDateTime salida;
     private List<Consumo> consumo;
 
-    public Cliente(String nombre, LocalDate entrada, LocalDate salida, List<Consumo> consumo) {
+    public Cliente(String nombre, BsonDateTime entrada, BsonDateTime salida, List<Consumo> consumo) {
         super();
         this.nombre = nombre;
         this.entrada = entrada;
@@ -47,19 +40,19 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public LocalDate getEntrada() {
+    public BsonDateTime getEntrada() {
         return entrada;
     }
 
-    public void setEntrada(LocalDate entrada) {
+    public void setEntrada(BsonDateTime entrada) {
         this.entrada = entrada;
     }
 
-    public LocalDate getSalida() {
+    public BsonDateTime getSalida() {
         return salida;
     }
 
-    public void setSalida(LocalDate salida) {
+    public void setSalida(BsonDateTime salida) {
         this.salida = salida;
     }
     

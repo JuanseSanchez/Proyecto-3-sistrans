@@ -2,16 +2,14 @@ package uniandes.edu.co.proyecto.modelo;
 
 import java.time.LocalDate;
 
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.bson.BsonDateTime;
 
-@Document("consumos")
 public class Consumo {
 
-    private LocalDate fecha;
-
+    private BsonDateTime fecha;
     private Servicio servicio;
 
-    public Consumo(LocalDate fecha, Servicio servicio) {
+    public Consumo(BsonDateTime fecha, Servicio servicio) {
         super();
         this.fecha = fecha;
         this.servicio = servicio;
@@ -21,11 +19,11 @@ public class Consumo {
         super();
     }
 
-    public LocalDate getFecha() {
+    public BsonDateTime getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDate fecha) {
+    public void setFecha(BsonDateTime fecha) {
         this.fecha = fecha;
     }
 
